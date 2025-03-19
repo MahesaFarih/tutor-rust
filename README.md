@@ -9,3 +9,11 @@ This milestone transformed the server from a passive listener to an active respo
 <details>
 <summary>Commit 3 Reflection</summary>
 This milestone introduced dynamic request handling, emphasizing path validation and appropriate HTTP responses. It laid the groundwork for more advanced features like concurrency (Milestone 5) and error handling.
+
+<details>
+<summary>Commit 4 Reflection</summary>
+- Single-Threaded Servers Are Brittle: One slow request stalls the entire server.
+
+- Concurrency Is Critical: To handle multiple users efficiently, tasks must run in parallel.
+
+- Rust’s Safety: Even with blocking code, Rust’s ownership system prevents memory leaks or crashes during delays.
