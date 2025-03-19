@@ -12,8 +12,25 @@ This milestone introduced dynamic request handling, emphasizing path validation 
 
 <details>
 <summary>Commit 4 Reflection</summary>
+
 - Single-Threaded Servers Are Brittle: One slow request stalls the entire server.
 
 - Concurrency Is Critical: To handle multiple users efficiently, tasks must run in parallel.
 
 - Rust’s Safety: Even with blocking code, Rust’s ownership system prevents memory leaks or crashes during delays.
+
+
+<details>
+<summary>Commit 5 Reflection</summary>
+
+### Why ThreadPool?
+- Avoids the overhead of spawning unlimited threads (prevents DoS attacks).
+- Balances performance and resource usage.
+
+### Challenges:
+- Understanding Rust’s concurrency primitives (Arc, Mutex, mpsc).
+- Ensuring thread safety without data races.
+
+### Key Learnings:
+- How thread pools manage concurrent tasks efficiently.
+- Rust’s compiler guarantees thread safety at compile time (e.g., Send and Sync traits).
